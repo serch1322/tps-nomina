@@ -307,6 +307,7 @@
                     <t t-set="tfd_original_string" t-value="o._get_l10n_mx_edi_cadena()"/>
                     <t t-set="external" t-value="o.l10n_mx_edi_get_et_etree(xml)"/>
                 </t>
+                </xpath>
             </xpath>
             <xpath expr="//div[@name='customer_code']" position="replace">
             </xpath>
