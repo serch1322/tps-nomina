@@ -278,25 +278,25 @@
 
 
 
-    <record id="factura_mx_suma" model="ir.ui.view">
+    <!--<record id="factura_mx_suma" model="ir.ui.view">
         <field name="name">factura.mx.suma</field>
         <field name="type">qweb</field>
         <field name="inherit_id" ref="l10n_mx_edi.report_invoice_document_mx"/>
         <field name="arch" type="xml">
-            <xpath expr="//h2[1]" position="after">
+            <xpath expr="//h2[1]" position="replace">
+                <xpath expr="//br[1]" position="after">
                 <t t-if="not o.l10n_mx_edi_cfdi_uuid and o.l10n_mx_edi_is_required()">
-                    <!-- due to HTML preview for device responsive -->
                     <button t-attf-class="btn-danger #{'btn' if report_type != 'html' else ''}">
                         <strong>Esta factura no esta timbrada, favor de timbrar.</strong>
                     </button>
                 </t>
                 <t t-if="o.l10n_mx_edi_cfdi_uuid">
-                    <!--New global variables-->
                     <t t-set="xml" t-value="o.l10n_mx_edi_get_xml_etree()"/>
                     <t t-set="tfd" t-value="o.l10n_mx_edi_get_tfd_etree(xml)"/>
                     <t t-set="tfd_original_string" t-value="o._get_l10n_mx_edi_cadena()"/>
                     <t t-set="external" t-value="o.l10n_mx_edi_get_et_etree(xml)"/>
                 </t>
+                </xpath>
             </xpath>
             <xpath expr="//div[@name='customer_code']" position="replace">
             </xpath>
@@ -305,5 +305,5 @@
             <xpath expr="//table[@name='invoice_line_table']/thead/tr/th[4]" position="after">
             </xpath>
         </field>
-    </record>
+    </record> -->
 </odoo>
