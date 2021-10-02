@@ -63,11 +63,11 @@
                                   <strong>FOLIO SAT</strong>
                               </div>
                               <div id="content" style="font-size: 10px">
-                                  <span t-esc="tfd.get('UUID')"/>
-                                  <br> <strong>Fecha Emisión: </strong> <span t-esc="xml.get('fecha', xml.get('Fecha', '')).replace('T', ' ')"/> </br>
-                                  <br> <strong>Fecha Certificación: </strong> <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/> </br>
-                                  <br> <strong>Certificado Emisor: </strong> <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/> </br>
-                                  <br> <strong>Certificado SAT: </strong> <span t-esc="tfd.get('NoCertificadoSAT')"/> </br>
+                                  <strong>UUID: </strong> <span t-field="o.l10n_mx_edi_cfdi_uuid"/> <br/>
+                                  <strong>Fecha Emisión: </strong> <span t-esc="xml.get('fecha', xml.get('Fecha', '')).replace('T', ' ')"/> <br/>
+                                  <strong>Fecha Certificación: </strong> <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/> <br/>
+                                  <strong>Certificado Emisor: </strong> <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/> <br/>
+                                  <strong>Certificado SAT: </strong> <span t-esc="tfd.get('NoCertificadoSAT')"/>
                               </div>
                           </div>
                       </div>
