@@ -30,15 +30,6 @@
             <xpath expr="//div[@class'page']" position="replace">
                 <div class="page">
                   <div class="row mb24">
-                      <div class="col-4">
-                          <span t-field="o.company_id.logo" t-options="{'widget': 'image'}" style="max-height: 45px;"/>
-                      </div>
-                      <div class="col-4" style="font-size: 11px">
-                          <strong> <span t-field="o.company_id.name"/> </strong>
-                          <br> <strong> <span t-field="o.company_id.vat"/> </strong> </br>
-                          <br> <span t-field="o.company_id.street"/> <span> C.P:</span> <span t-field="o.company_id.zip"/> </br>
-                          <br> <span>COL: </span> <span t-field="o.company_id.l10n_mx_edi_colony"/> <span> </span> <span t-field="o.company_id.state_id.name"/> <span> </span>  <span t-field="o.company_id.country_id.name"/> </br>
-                      </div>
                       <div class="col-4 text-center">
                           <div class="title_box" id="name" style="border: 1px solid black">
                               <div id="title" style="background-color: #eb5f2d; color: white; font-size: 11px">
@@ -292,8 +283,7 @@
         <field name="type">qweb</field>
         <field name="inherit_id" ref="l10n_mx_edi.report_invoice_document_mx"/>
         <field name="arch" type="xml">
-            <xpath expr="//h2[1]" position="replace">
-                <xpath expr="//br[1]" position="after">
+            <xpath expr="//h2[1]" position="after">
                 <t t-if="not o.l10n_mx_edi_cfdi_uuid and o.l10n_mx_edi_is_required()">
                     <!-- due to HTML preview for device responsive -->
                     <button t-attf-class="btn-danger #{'btn' if report_type != 'html' else ''}">
@@ -307,7 +297,6 @@
                     <t t-set="tfd_original_string" t-value="o._get_l10n_mx_edi_cadena()"/>
                     <t t-set="external" t-value="o.l10n_mx_edi_get_et_etree(xml)"/>
                 </t>
-                </xpath>
             </xpath>
             <xpath expr="//div[@name='customer_code']" position="replace">
             </xpath>
