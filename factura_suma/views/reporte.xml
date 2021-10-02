@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="ajuste_layout_suma" model="ir.ui.view">
+        <field name="name">ajuste.layout.suma</field>
+        <field name="type">qweb</field>
+        <field name="inherit_id" ref="web.external_layout_standard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='row']/div[@class='col-3 mb4']/img" position="replace">
+                <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 70px;" alt="Logo"/>
+            </xpath>
+            <xpath expr="//div[@class='row']/div[@name='moto']" position="inside">
+                <strong t-field="company.name"/>
+                <br/>
+                <strong t-field="company.vat"/>
+                <br/>
+                <span t-field="company.street"/> <span> C.P:</span> <span t-field="company.zip"/>
+            </xpath>
+            <xpath expr="//div[@class='row zero_min_height']" position="replace">
+            </xpath>
+            <xpath expr="//div[@t-att-style='report_header_style']/div[@class='row'][2]" position="replace">
+            </xpath>
+        </field>
+    </record>
+</odoo>
