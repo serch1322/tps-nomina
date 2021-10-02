@@ -64,8 +64,8 @@
                               </div>
                               <div id="content" style="font-size: 10px">
                                   <strong>UUID: </strong> <span t-field="o.l10n_mx_edi_cfdi_uuid"/> <br/>
-                                  <strong>Fecha Emisión: </strong> <span t-field="o.date"/> <br/>
-                                  <strong>Fecha Certificación: </strong> <span t-field="o.date"/> <br/>
+                                  <strong>Fecha Emisión: </strong> <span t-field="o.invoice_date"/> <br/>
+                                  <strong>Fecha Certificación: </strong> <span t-field="o.invoice_date"/> <br/>
                                   <strong>Certificado Emisor: </strong> <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/> <br/>
                                   <strong>Certificado SAT: </strong> <span t-esc="tfd.get('NoCertificadoSAT')"/>
                               </div>
