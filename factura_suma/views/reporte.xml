@@ -66,6 +66,8 @@
                                   <strong>UUID: </strong> <span t-field="o.l10n_mx_edi_cfdi_uuid"/> <br/>
                                   <strong>Fecha Emisión: </strong> <span t-field="o.invoice_date"/> <br/>
                                   <strong>Fecha Certificación: </strong> <span t-field="o.invoice_date"/> <br/>
+                                  <strong>Certificado Emisor: </strong> <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/> <br/>
+                                  <strong>Certificado SAT: </strong> <span t-esc="tfd.get('NoCertificadoSAT')"/>
                               </div>
                           </div>
                       </div>
@@ -295,10 +297,6 @@
                     <t t-set="external" t-value="o.l10n_mx_edi_get_et_etree(xml)"/>
                 </t>
                 </xpath>
-            </xpath>
-            <xpath expr="//div[@id='content']" position="inside">
-                <strong>Certificado Emisor: </strong> <span t-esc="xml.get('noCertificado', xml.get('NoCertificado'))"/> <br/>
-                <strong>Certificado SAT: </strong> <span t-esc="tfd.get('NoCertificadoSAT')"/>
             </xpath>
             <xpath expr="//div[@name='customer_code']" position="replace">
             </xpath>
