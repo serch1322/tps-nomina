@@ -125,7 +125,7 @@
                   <div class="row mb24">
                       <div class="col-12 text-center" style="font-size: 10px">
                           <p>
-                            <span t-field="o.x_studio_asunto"/>
+                            <!--<span t-field="o.x_studio_asunto"/>-->
                             <span t-field="o.ref"/>
                           </p>
                       </div>
