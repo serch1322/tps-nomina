@@ -27,6 +27,8 @@
         <field name="type">qweb</field>
         <field name="inherit_id" ref="account.report_invoice_document"/>
         <field name="arch" type="xml">
+            <xpath expr="//t[@t-set='address']" position="replace">
+            </xpath>
             <xpath expr="//div[@class='page']" position="replace">
                 <div class="page">
                   <div class="row mb24">
